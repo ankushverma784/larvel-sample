@@ -32,6 +32,10 @@ Route::get('/hotel', 'HomeController@hotel');
 Route::get('/hoteldetail', 'HomeController@hoteldetail');
 Route::get('/tour', 'HomeController@tour');
 
+
+
+Route::resource('products', ProductController::class);
+
 Auth::routes();
 // Route::get('admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
 
