@@ -14,9 +14,9 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('home.index');
-// });
+Route::get('/', function () {
+    return view('home.index');
+});
 // Route::get('/aboout', function () { return view('home.about');});
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 
@@ -24,7 +24,7 @@ Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->nam
 
 
 Route::get('index', 'HomeController@index')->name('index');
-Route::get('/about', 'HomeController@about');
+Route::get('about', 'HomeController@about');
 Route::get('/blog', 'HomeController@blog');
 Route::get('/blogdetail', 'HomeController@blogdetail');
 Route::get('/contact', 'HomeController@contact');
@@ -33,8 +33,14 @@ Route::get('/hoteldetail', 'HomeController@hoteldetail');
 Route::get('/tour', 'HomeController@tour');
 
 Auth::routes();
+// Route::get('admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
 
-Route::get('admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
+
+Route::group(['prefix' => 'admin',  'middleware' => 'auth'],function () {
+    Route::get('/', 'AdminController@index')->name('admin');
+    
+    Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
+});
 
 
 
