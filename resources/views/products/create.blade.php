@@ -1,10 +1,3 @@
-{{-- 
-                <input type="file" name="image" class="file-upload-default">
-                {{-- <input type="text" class="form-control" name="image" placeholder="price"> --}}
-                {{-- <div class="input-group col-xs-12"> --}}
-                  {{-- <input type="text" class="form-control file-upload-info" placeholder="Upload Image"> --}}
-                  {{-- <span class="input-group-append">
-                    <button class="file-upload-browse btn btn-info" type="button">Upload</button> --}}
 @extends('layouts.dashboard')
  
 @section('content')

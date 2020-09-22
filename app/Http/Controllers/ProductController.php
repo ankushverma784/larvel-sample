@@ -104,15 +104,15 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        $request->validate([
-            'name' => 'required',
-            'detail' => 'required',
-        ]);
+        // $request->validate([
+        //     'name' => 'required',
+        //     'detail' => 'required',
+        // ]);
     
-        $product->update($request->all());
+        // $product->update($request->all());
     
-        return redirect()->route('products.index')
-                        ->with('success','Product updated successfully');
+        // return redirect()->route('products.index')
+        //                 ->with('success','Product updated successfully');
     }
     
     /**
