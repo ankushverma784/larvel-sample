@@ -21,13 +21,21 @@
     <link rel="shortcut icon" href="../assets/admin/images/favicon.ico" />
   </head>
   <body>
-
-    <div class="wrapper">
-        @yield('content')    
-    </div>>
-
-
-
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      @include('include.adminnav')
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        @include('include.adminsidebar')
+        <!-- partial -->
+        @yield('content')
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
     <script src="../assets/admin/vendors/js/vendor.bundle.base.js"></script>
     <script src="../assets/admin/vendors/js/vendor.bundle.addons.js"></script>
     <!-- endinject -->
