@@ -29,7 +29,13 @@
         <!-- partial:partials/_sidebar.html -->
         @include('include.adminsidebar')
         <!-- partial -->
-        @yield('content')
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row">
+              @yield('content')
+            </div>
+          </div>
+        </div>
         <!-- main-panel ends -->
       </div>
       <!-- page-body-wrapper ends -->

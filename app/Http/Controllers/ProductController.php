@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
    
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
   
 class ProductController extends Controller
 {
@@ -43,13 +44,32 @@ class ProductController extends Controller
             'title' => 'required',
             'description' => '',
             'city' => 'required',
+            'image' => '',
+            // 'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'no_of_days' => '',
         ]);
-    
+            
+
+        // $image = $request->file('image');
+        // $extension = $image->getClientOriginalExtension();
+        // $originalname = $image->getClientOriginalName();
+        // $path = $image->storeAs('', $originalname);
+        // $mimetype = $image->getClientMimeType();
+
+        // $picture = new mediaLibrary();
+        // $picture->mime = $mimetype;
+        // $picture->original_filename = $originalname;
+        // $picture->filename = $path;   
+        // $picture->save();
+
+ 
         Product::create($request->all());
      
         return redirect()->route('products.index')
                         ->with('success','Product created successfully.');
+
+
+
     }
     
    
@@ -72,7 +92,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        // return view('products.edit',compact('product'));
+        return view('products.edit',compact('product'));
     }
     
     /**
@@ -84,15 +104,15 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        // $request->validate([
-        //     'name' => 'required',
-        //     'detail' => 'required',
-        // ]);
+        $request->validate([
+            'name' => 'required',
+            'detail' => 'required',
+        ]);
     
-        // $product->update($request->all());
+        $product->update($request->all());
     
-        // return redirect()->route('products.index')
-        //                 ->with('success','Product updated successfully');
+        return redirect()->route('products.index')
+                        ->with('success','Product updated successfully');
     }
     
     /**

@@ -8,9 +8,7 @@
 @extends('layouts.dashboard')
  
 @section('content')
-    <div class="main-panel">
-        <div class="content-wrapper">
-            <div class="row">
+
                 <div class="col-md-2"></div>
                 <div class="col-md-8 grid-margin stretch-card">
                     <div class="card">
@@ -67,12 +65,6 @@
                                             </span>
                                             
                                         </div>
-                                  
-                                        
-
-                                        
-
-
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputCity1">No of Days</label>
@@ -86,9 +78,7 @@
                     </div>
                 </div>
                 <div class="col-md-2"></div>
-            </div>
-        </div>
-    </div>
+
         
 @endsection
 

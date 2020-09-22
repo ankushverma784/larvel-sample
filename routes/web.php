@@ -14,16 +14,16 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-});
+// Route::get('/', function () {
+//     return view('home.index');
+// });
 // Route::get('/aboout', function () { return view('home.about');});
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 
 // Route::get('index', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
 
-Route::get('index', 'HomeController@index')->name('index');
+Route::get('', 'HomeController@index')->name('index');
 Route::get('about', 'HomeController@about');
 Route::get('/blog', 'HomeController@blog');
 Route::get('/blogdetail', 'HomeController@blogdetail');
@@ -45,7 +45,7 @@ Route::group(['prefix' => 'admin',  'middleware' => 'auth'],function () {
     
     Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
     // Route::get('/addproduct', 'AdminController@addproduct')->name('addproduct');
-    Route::get('/index', 'AdminController@dashboard')->name('dashboard');
+    // Route::get('/', 'AdminController@dashboard')->name('dashboard');
 
 });
 
