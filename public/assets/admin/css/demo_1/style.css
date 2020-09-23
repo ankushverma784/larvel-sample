@@ -748,3 +748,13 @@
     display: none; }
 
 /*# sourceMappingURL=style.css.map */
+ .procss{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+ }
+ .procss2{
+    display: inline-block;
+    margin: 0;
+ }

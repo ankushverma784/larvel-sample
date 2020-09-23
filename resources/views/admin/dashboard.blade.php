@@ -1,7 +1,5 @@
 @extends('layouts.dashboard')
 @section('content')
-
- 
           <!-- Page Title Header Starts-->
           <div class="row page-title-header">
             <div class="col-md-12">

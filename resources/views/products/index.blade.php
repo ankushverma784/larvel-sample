@@ -11,14 +11,15 @@
                     </div>
                     <div class="col-md-2">
                             <a class="btn btn-success" href="{{ route('products.create') }}"> Create New Product</a>
-                                @if ($message = Session::get('success'))
+                                
+                    </div>
+
+                </div>
+                @if ($message = Session::get('success'))
                                 <div class="alert alert-success">
                                     <p>{{ $message }}</p>
                                 </div>
                                @endif
-                    </div>
-
-                </div>
                 {{-- <p class="card-description">  </p> --}}
                 <table class="table table-striped">
                 <thead>

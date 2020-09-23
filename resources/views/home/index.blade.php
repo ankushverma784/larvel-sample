@@ -194,7 +194,8 @@
               <div class="col-sm col-md-6 col-lg ftco-animate">
                   <div class="destination" >
                       {{-- <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url('./web/images/destination-1.jpg');"> --}}
-                        <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url('{{ $product->image }}');">
+                        <a href="#" class="img img-2 d-flex justify-content-center align-items-center" 
+                        style="background-image: url('./web/images/{{ $product->image }}'); ">
                           <div class="icon d-flex justify-content-center align-items-center">
                               <span class="icon-search2"></span>
                           </div>
@@ -877,4 +878,5 @@
       </div>
     </div>
   </section>
+  
 @endsection

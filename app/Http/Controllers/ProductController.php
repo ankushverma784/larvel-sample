@@ -40,36 +40,18 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'price' => 'required',
             'title' => 'required',
-            'description' => '',
+            'description' => 'required',
+            'price' => 'required',
             'city' => 'required',
-            'image' => '',
+            'image' => 'required',
             // 'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'no_of_days' => '',
+            'no_of_days' => 'required',
         ]);
-            
-
-        // $image = $request->file('image');
-        // $extension = $image->getClientOriginalExtension();
-        // $originalname = $image->getClientOriginalName();
-        // $path = $image->storeAs('', $originalname);
-        // $mimetype = $image->getClientMimeType();
-
-        // $picture = new mediaLibrary();
-        // $picture->mime = $mimetype;
-        // $picture->original_filename = $originalname;
-        // $picture->filename = $path;   
-        // $picture->save();
-
- 
         Product::create($request->all());
      
         return redirect()->route('products.index')
                         ->with('success','Product created successfully.');
-
-
-
     }
     
    
@@ -104,15 +86,19 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        // $request->validate([
-        //     'name' => 'required',
-        //     'detail' => 'required',
-        // ]);
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'price' => 'required',
+            'city' => 'required',
+            'image' => 'required',
+            'no_of_days' => 'required',
+        ]);
     
-        // $product->update($request->all());
+        $product->update($request->all());
     
-        // return redirect()->route('products.index')
-        //                 ->with('success','Product updated successfully');
+        return redirect()->route('products.index')
+                        ->with('success','Product updated successfully');
     }
     
     /**
@@ -123,9 +109,9 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        // $product->delete();
+        $product->delete();
     
-        // return redirect()->route('products.index')
-        //                 ->with('success','Product deleted successfully');
+        return redirect()->route('products.index')
+                        ->with('success','Product deleted successfully');
     }
 }
