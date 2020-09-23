@@ -73,10 +73,10 @@
                         </div> --}}
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>File upload</label>
+                                <strong>File upload:</strong>
                                 <input type="file" name="image" class="file-upload-default" id="fileUploadInput" style="display:none">
                                 <div class="input-group col-xs-12">
-                                  <input type="text" class="form-control file-upload-info" id ="showFileName" disabled placeholder="Upload gdfgdsgsdImage" name="image">
+                                  <input type="text" class="form-control file-upload-info" id ="showFileName" disabled placeholder="Upload Image" name="image">
                                   <span class="input-group-append">
                                     <button id="uploadButton" class="file-upload-browse btn btn-info" type="button">Upload</button>
                                   </span>
@@ -90,11 +90,13 @@
                             </div>
                         </div>
                       
-                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">  
                             <button type="submit" class="btn btn-success mr-2">Submit</button>
                             <button class="btn btn-light">Cancel</button>
+                        </div>
                     </div>
-                
                 </form>
 
                 

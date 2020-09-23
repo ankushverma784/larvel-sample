@@ -47,18 +47,15 @@
                                     </div>
                                     <div class="form-group">
                                         <label  >File upload</label>
-                                       
+                                        <input type="file" name="image" class="file-upload-default" id="fileUploadInput" style="display:none">
                                         <div class="input-group col-xs-12">
-                                            <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                                            <input type="text" class="form-control file-upload-info" id ="showFileName" disabled placeholder="Upload Image" name="image">
                                             <span class="input-group-append">
-                                               
-                                                {{-- <button type ="file" class="file-upload-browse btn btn-info" id="imgupload" name="image">
-                                                    Upload file</button> --}}
-                                                <input type="file" id="imgupload" name="image">
+                                            <button id="uploadButton" class="file-upload-browse btn btn-info" type="button">Upload</button>
                                             </span>
-                                            
                                         </div>
-                                    </div>
+                                        </div>
+
                                     <div class="form-group">
                                         <label for="exampleInputCity1">No of Days</label>
                                         <input type="text" class="form-control" id="exampleInputCity1" placeholder="Location" name="no_of_days">
