@@ -194,7 +194,7 @@
               <div class="col-sm col-md-6 col-lg ftco-animate">
                   <div class="destination" >
                       {{-- <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url('./web/images/destination-1.jpg');"> --}}
-                        <a href="#" class="img img-2 d-flex justify-content-center align-items-center" 
+                      <a href="hoteldetail" class="img img-2 d-flex justify-content-center align-items-center" 
                         style="background-image: url('./web/images/{{ $product->image }}'); ">
                           <div class="icon d-flex justify-content-center align-items-center">
                               <span class="icon-search2"></span>
@@ -222,8 +222,8 @@
                           <hr>
                           <p class="bottom-area d-flex">
                               <span><i class="icon-map-o"></i> {{ $product->city }}</span> 
-                              <span class="ml-auto"><a href="#">Discover</a></span>
-                          </p>
+                          <span class="ml-auto"><a href="hoteldetail/{{ $product->id }}">Discover</a></span>
+  
                       </div>
                   </div>
               </div>

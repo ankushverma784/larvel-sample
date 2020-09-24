@@ -29,7 +29,10 @@ Route::get('/blog', 'HomeController@blog');
 Route::get('/blogdetail', 'HomeController@blogdetail');
 Route::get('/contact', 'HomeController@contact');
 Route::get('/hotel', 'HomeController@hotel');
-Route::get('/hoteldetail', 'HomeController@hoteldetail');
+// Route::get('/hoteldetail', 'HomeController@hoteldetail');
+Route::get('/hoteldetail/{id}', 'HomeController@hoteldetail')->name('hoteldetail');
+
+
 Route::get('/tour', 'HomeController@tour');
 
 

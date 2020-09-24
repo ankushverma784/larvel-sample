@@ -47,7 +47,14 @@ class HomeController extends Controller
     }
     public function hotel()
     {
-        return view('home.hoteldetail');
+        return view('home.hotel');
+    }
+    public function hoteldetail($id)      
+    {
+        $product = Product::find($id);
+        // dd($hoteldetail->id);
+        return view ('home.hoteldetail',compact('product'));
+
     }
     public function tour()
     {
